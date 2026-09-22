@@ -15,7 +15,7 @@ WHITE='\033[1;37m'
 BOLD='\033[1m'
 NC='\033[0m'
 
-INSTALLER_VERSION="v1.2.4"
+INSTALLER_VERSION="v2.1.9"
 
 # ==========================================
 # 🛠 Вспомогательные функции UI
@@ -137,7 +137,7 @@ install_wdtt() {
     cd /opt/wdtt
     
     info "Скачивание ядра сервера..."
-    wget -q -O wdtt.apk "https://github.com/amurcanov/proxy-turn-vk-android/releases/download/${INSTALLER_VERSION}/WDTT-x86_64.apk"
+    wget -q -O wdtt.apk "https://github.com/amurcanov/csqtt/releases/download/${INSTALLER_VERSION}/CSQTT-x86_64.apk"
     info "Извлечение бинарных файлов..."
     unzip -q -o wdtt.apk -d apk > /dev/null 2>&1
     
