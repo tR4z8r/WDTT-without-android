@@ -67,7 +67,7 @@ check_port() {
 # Сбор информации о системе
 get_system_info() {
     OS_NAME=$(grep -oP '(?<=^NAME=")[^"]*' /etc/os-release || echo "Linux")
-    SERVER_IP=$(curl -s --connect-timeout 3 ifconfig.me || curl -s --connect-timeout 3 api.ipify.org || echo "127.0.0.1")
+    SERVER_IP=$(curl -4 -s --connect-timeout 3 https://api.ipify.org || curl -4 -s --connect-timeout 3 https://ifconfig.me || curl -4 -s --connect-timeout 3 https://icanhazip.com || echo "127.0.0.1")
 
     if systemctl is-active --quiet wdtt; then
         WDTT_STATUS="${GREEN}● ACTIVE (Работает)${NC}"
