@@ -137,7 +137,7 @@ install_wdtt() {
     cd /opt/wdtt
     
     info "Скачивание ядра сервера..."
-    wget -q -O wdtt.apk "https://github.com/amurcanov/proxy-turn-vk-android/releases/download/${INSTALLER_VERSION}/WDTT-x86_64.apk"
+    wget -q -O wdtt.apk "https://github.com/tR4z8r/WDTT-without-android/releases/download/${INSTALLER_VERSION}/WDTT-x86_64.apk"
     info "Извлечение бинарных файлов..."
     unzip -q -o wdtt.apk -d apk > /dev/null 2>&1
     
